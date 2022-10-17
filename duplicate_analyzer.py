@@ -20,6 +20,9 @@ def main():
     size_ordered = {key: all_files[key] for key in reversed(sorted((key for key in all_files.keys()), key=lambda x: x[1]))}
     print(size_ordered)
 
+    amount_ordered = {keyvalue[0]: keyvalue[1] for keyvalue in reversed(sorted((key for key in all_files.items()), key=lambda keyvalue: len(keyvalue[1])))}
+    print(amount_ordered)
+
 
 if __name__ == '__main__':
     main()
